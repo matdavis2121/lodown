@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!-------------- PROJECT TIME STAMPS ---------------->
+<!-- Textareas completed -- 06/18/2017 22:14:07 -->
+<!-- Centered, organized CSS -- 06/18/2017 22:14:07 -->
+<!-- JavascriptComplete! Final touches later -- "06/25/2017 03:28:34 -->
+
+<html><head>
+<meta name="description" content="First Web App">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Library Documentation Maker App</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<style id="myjsbin-css">
+  
+  /* -----------1. MAIN DEFAULTS---------- */
+  .main {
+    
+  }
+  
+  .p-spacing {
+    padding: 5px 5px 3px 8px;
+    color: white;
+    margin: 0px 0px 0px 0px;   
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    left: 240px;
+    width: 300px;
+  }
+  
+
+  
+  /* -----------2. TEXTAREAS---------- */
+  .textarea-default {
+    margin-top: 1px;
+    margin-left: 8px;
+    width: 50%;
+    height: 23px;
+    resize: none
+    position: absolute;
+    display: inline-block;
+    padding-left: 1px    
+  }
+  
+  .textarea-All {
+    font-family: 'Lato', sans-serif;
+    padding-top: 8px;
+    padding-left: 5px;
+    box-shadow: 0px -1px 0px 0px coral
+  }
+  /* -----------2a. Function Elements ---------- */
+  #func-name-p{
+    position:absolute;
+    padding: 5px 5px 3px 8px;
+    color: white;
+    margin: 0px 0px 0px 0px;   
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    left: 0px;
+    top: 0px;
+    width: 227px;
+    display: inline-block;
+  }
+  
+  #func-name-textarea{
+    top: 32px;
+    height: 25px;
+    width: 220px;
+    resize: none;
+    display:;
+    box-shadow: 0px -1px 0px 0px coral
+  }
+  
+    #func-desc-text-a {
+    height: 70px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .names-textarea {
+    margin-top: 1px;
+    margin-left: 8px;
+    width: 200px;
+    height: 25px;
+    resize: horizontal;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  
+  /* a. Function Description P         = .p-spacing */
+  /* b. Function Description textarea  = .param-desc-textareas */
+  
+  
+  /* ----------------- 2b. Parameter Elements ---------- */
+  
+  .hide-all-param-elements{
+    display:none;
+  }
+  
+.select-param-type {
+    position: absolute;
+    top: 100%;
+    left: 8px;
+    border-radius: 5px
+}
+  
+  .name-paragraph {
+    padding: 5px 5px 3px 8px;
+    color: white;
+    margin: 0px 0px 0px 0px;   
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 227px;
+    display: inline;
+  }
+  
+  .param-name-textareas{
+    position: absolute;
+    top: 32px;
+    width: 37%;
+    resize: none;
+  }
+  
+  /* a. Parameter Description Paragraph = .p-spacing */
+  
+  /* Controls the positioning of ALL Description text areas */
+.param-desc-textareas{
+    position: relative;
+    left: 240px;
+    width: 55%;
+    resize:none;
+    font-family: 'Lato', sans-serif;      
+  }
+  
+ .param {
+    margin-bottom: 25px;
+    position: relative;
+    
+  }
+  
+    /* Parameter spans */
+  .p-span {
+   /*  //text-decoration: underline; */
+    font-weight: 600
+  }
+  
+    /* Gives margin for PARAM DESC after Function Description  */
+  .params :first-child {
+ /*    //margin-top: 25px; */
+  }
+
+
+/* ----------------- 3b. Return Values ---------- */  
+  
+.return-desc-textareas{
+    position: relative;
+    left: 0px;
+    width: 95%;
+    resize:none;
+    font-family: 'Lato', sans-serif;      
+    top:34px
+  }
+  
+.return-paragraph {
+    top:35px;
+    left: 33%
+  }
+
+.select-return-type{
+    position: relative;
+    top: 34px;
+    left: 198px;
+    border-radius: 5px
+  }
+
+#only-return-div{
+    
+  }  
+/* Return description divider */
+#div-dividers-prereturn{
+    width: 101%;
+    margin-top: 15px;
+    margin-bottom: -15px;
+    border-color: coral; 
+    position: relative;
+    left:0px;
+    top:18px;
+  }
+  
+  
+  
+/* ------------------ 3. DIVS CSS---------- */
+  .div-shape {
+    border-radius: 10px;
+  }
+  
+  .div-general {
+    width: 100%;
+    position:relative;
+    left:-3px;
+   /*  //align: right; */
+  }
+    
+  /* HR's that separate DIVs */
+  #div-dividers {
+    width: 92%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-color: coral; 
+    position: relative;
+    right: 5px
+  }
+  
+  /* ------------------ 3.BEFORE-FORMATTED CODE---------- */
+ 
+.before-code-div{
+    width: 90%;
+    height: 100px;    
+    margin-left: 19px;
+    margin-top: 25px;
+    position: relative;
+    top: 25px
+  }  
+  
+.function-codetext-pre{
+    position: relative;
+    /* margin: auto; */
+    width: 110%;
+    height: 360%;
+    left: 0px;
+    resize: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;  
+   }
+  
+.function-codetext-pre::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: coral;
+  font-family: "Lato", sans-serif;
+  opacity: 1;
+  font-size: 20px;
+  text-align: center;
+  }
+
+  
+  
+  /* ------------------ 3. AFTER-FORMATTED CODE---------- */
+  .mod-export-code{
+    margin-top: -25px;
+  }
+  
+#code-result-textarea {
+    width: 91%;
+    height: 92%;
+    resize: none;
+    padding-left: 20px;
+    padding-top: 20px;
+    overflow: hidden;
+    word-wrap: break-word;
+    position: relative;
+    top: -35px;
+  }
+  
+  
+/* ------------------ 4. SPECIAL CSS---------- */  
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: grey;
+  font-family: "Lato", sans-serif;
+  opacity: 0;
+  }
+  
+
+</style>
+</head>
+<body id="myBabyBody">
+    <div id="page-wrapper" 
+    style="margin: 0 auto; width: 600px">
+        <div class="main div-shape" style="
+                background-color: 
+                yellowgreen;
+                width: 600px;
+                height: 980px;
+                position: relative;
+                margin: 5px;
+                padding-left: 11px ;
+                padding-top:15px ;                                           
+                display: ;                                          
+                ">
+          
+        <!-- 1. ENTER FUNCTION DESCRIPTION -->
+        <div class="fun-description div-general">
+          
+          <!-- FN = Function Name -->
+          <p id="func-name-p" ><span class="p-span">Function</span> Name</p>
+          <textarea id="func-name-textarea" class="names-textarea param-name-textareas textarea-All "
+          placeholder="Please enter a function name."
+          ></textarea>
+          
+          <!-- FD = Function Description -->
+          <p class="p-spacing" style="display: inline-block;"><span class="p-span">Function</span> Description</p>
+          <!-- autofocus > attribute, activate later -->
+          <textarea id="func-desc-text-a" class="textarea-default param-desc-textareas textarea-All "
+           placeholder="Please enter a function description."
+                                
+          ></textarea>
+        </div>
+          
+        <hr id="div-dividers">
+      
+      <!-- 2. ALL PARAMETERS-->
+      <div class="all-params-container">      
+        
+        <!-- Parameter 1-->
+        <div class="param div-general">
+                              
+          <!-- P1A = Parameter Name -->
+          <p class="name-paragraph"><span class="p-span">Parameter 1</span> Name</p>          
+          <textarea id="paramName1" class="textarea-default param-name-textareas textarea-All"
+           placeholder="Please enter a name for parameter 1."
+          ></textarea> 
+          
+          <!-- P1B = Parameter Type -->
+          <select id="paramType1" class="select-param-type" 
+            name="Parameter Type">
+            <option value="Select Parameter Type">Select Parameter Type</option>
+            <option value="Any Type">Any Type</option>
+            <option value="Array">Array</option>            
+            <option value="Array or Object">Array or Object</option>
+            <option value="Boolean">Boolean</option>
+            <option value="Date">Date</option>
+            <option value="Function">Function</option>
+            <option value="Number">Number</option>          
+            <option value="String">String</option>
+            <option value="Object">Object</option>            
+          </select>
+          
+          <!-- P1C = Parameter Description -->
+          <p class="p-spacing"><span class="p-span">Parameter 1</span> Description</p>          
+          <textarea id="paramDesc1" class="textarea-default param-desc-textareas textarea-All"
+           placeholder="Please enter a description for parameter 1."
+          ></textarea>  
+                    
+        </div>
+        
+        <!-- Parameter 2-->
+        <div class="param div-general">
+                              
+          <!-- P2A = Parameter Name -->
+          <p class="name-paragraph"><span class="p-span">Parameter 2</span> Name</p>          
+          <textarea id="paramName2" class="textarea-default param-name-textareas textarea-All" placeholder="Please enter a name for parameter 1."></textarea> 
+          
+          <!-- P2B = Parameter Type -->
+          <select id="paramType2" class="select-param-type" name="Parameter Type">
+            <option value="Select Parameter Type">Select Parameter Type</option>
+            <option value="Any Type">Any Type</option>
+            <option value="Array">Array</option>
+            <option value="Array or Object">Array or Object</option>
+            <option value="Boolean">Boolean</option>
+            <option value="Date">Date</option>
+            <option value="Function">Function</option>
+            <option value="Number">Number</option>          
+            <option value="String">String</option>
+            <option value="Object">Object</option>            
+          </select>
+          
+          <!-- P2C = Parameter Description -->
+          <p class="p-spacing"><span class="p-span">Parameter 2</span> Description</p>          
+          <textarea id="paramDesc2" class="textarea-default param-desc-textareas textarea-All" placeholder="Please enter a description for parameter 1."></textarea>  
+                    
+        </div>
+        
+         <!-- Parameter 3-->        
+        <div class="param div-general">
+                              
+          <!-- P3A = Parameter Name -->
+          <p class="name-paragraph"><span class="p-span">Parameter 3</span> Name</p>          
+          <textarea id="paramName3" class="textarea-default param-name-textareas textarea-All" placeholder="Please enter a name for parameter 1."></textarea> 
+          
+          <!-- P3B = Parameter Type -->
+          <select id="paramType3" class="select-param-type" name="Parameter Type">
+            <option value="Select Parameter Type">Select Parameter Type</option>
+            <option value="Any Type">Any Type</option>
+            <option value="Array">Array</option>
+            <option value="Array or Object">Array or Object</option>
+            <option value="Boolean">Boolean</option>
+            <option value="Date">Date</option>
+            <option value="Function">Function</option>
+            <option value="Number">Number</option>          
+            <option value="String">String</option>
+            <option value="Object">Object</option>            
+          </select>
+          
+          <!-- P3C = Parameter Description -->
+          <p class="p-spacing"><span class="p-span">Parameter 3</span> Description</p>          
+          <textarea id="paramDesc3" class="textarea-default param-desc-textareas textarea-All" placeholder="Please enter a description for parameter 1."></textarea>  
+                    
+        </div>               
+      </div><!-- ENDOF: ALL PARAMETERs DIV -->                  
+                    
+    <div id="only-return-div" style="position: relative; width: 550px; height: 150px;">
+      <div id="return-Div" style="left: 19px" class="param div-general">                              
+          <hr id="div-dividers-prereturn">                  
+          
+          <!-- R1C = Return Description -->
+          <p class="p-spacing return-paragraph"><span class="p-span">Return</span> Description</p>          
+          <textarea id="returnDesc" class="textarea-default return-desc-textareas textarea-All"
+           placeholder="Please enter a description for parameter 1."
+          ></textarea> 
+        
+          <!-- R1B = Return Type -->
+          <select id="returnType" class="select-param-type select-return-type" 
+            name="Return Type">
+            <option value="Select Return Type">Select Return Type</option>
+            <option value="None">*NONE*</option>
+            <option value="Argument Provided">Argument Provided</option>
+            <option value="Array">Array</option>
+            <option value="Array or Object">Array or Object</option>
+            <option value="Boolean">Boolean</option>
+            <option value="Date">Date</option>
+            <option value="Function">Function</option>
+            <option value="Number">Number</option>          
+            <option value="String">String</option>
+            <option value="Object">Object</option>            
+          </select>
+          
+                     
+        </div>
+      
+        <!-- 3. FUNCTION CODE BEFORE FORMATTING-->
+        <div class="before-code-div" style="display:" >
+          
+          <!-- 3a = Submit Button -->
+          <button type="button" 
+            style="position: relative;
+            margin: 0px auto;
+            left: 200px;
+            border-radius: 5px;
+            color: white;
+            background-color: coral;
+            padding: 5px;" onclick="updateAfterCode()"
+            >FORMAT FUNCTION</button>
+          
+          <textarea id="pasted-code" class="function-codetext-pre"
+           placeholder="Please paste your code here."></textarea>                                          
+        </div>       
+      
+    </div>          
+    </div>
+       
+    <!-- 4. EXPORTED FORMAT -->     
+    <div class="mod-export-code div-shape"
+              style="width: 580px; height: 540px;
+                     background-color: coral;
+                     margin-left: 5px; margin-top: 10px;
+                     padding: 60px 0px 20px 30px; position: relative;
+                     top: 15px; display: block;">
+      
+      <button type="button"
+            style="position: relative;
+            margin: 0px auto;
+            left: 229px;
+            top: -39px;
+            border-radius: 5px;
+            color: white;
+            background-color: yellowgreen;
+            padding: 10px;" onclick="clearAll()">
+        CLEAR ALL</button>
+      <textarea id="code-result-textarea"></textarea>
+    </div>        
+    </div> <!-- END OF PAGE WRAPPER-->    
+  </body></html>
+
+<!-- NOTES FOR NEW FEATURES 
+1. I want a button that creates more PARAMETER DESCRIPTION DIV SETS
+  a. it will create a new element and append the new element to the div
+  b. it will also have to resize the main div by a certain amount
+  c. it will also need to increment by the previous number found in the p tag
+2. Do we want the the Code-export to update live??? That'd be dope!
+3. make a button to reset textarea to default sizing
+4. Have to build the FUNCTION NAME AREA and PARAM NAME area
+5. Placeholder text wont show until the 1st function name and func descri have text in them
+  OR
+  Placeholder only shows when the input has focus
+6. Build javascript that targets each textarea using a event and event property
+  a. use id's for each textarea ahread of time?
+  d. make pseudo code for each one to turn on and off?
+7. Make a app that turns numbers into their actual word equivalents
+8. Force a link break when there are more than 74 characters
+  a. my current method is taking the submitted textarea value but
+     maybe I should update as the person is typing
+
+
+-->
